@@ -40,18 +40,22 @@ class AllTime extends Component{
 	imageFormatter(cell, row){
       return (<Image style={{maxHeight:"35px"}}src={cell} responsive/>)
     }
+    dateFormatter(cell,row){
+    	return(moment(cell).calendar())
+    }
+
 	render(){
 		var dataF= this.state.thirtyDay
 		return(
 			<div>
 					
-					<BootstrapTable  data={dataF}  striped={true} options={ { noDataText: 'Loading Latest Leadboard. Please wait...' } }   hover={'true'} center pagination>
+					<BootstrapTable  data={dataF}  striped={true} search={true} options={ { noDataText: 'Loading Latest Leadboard. Please wait...' } }   hover={'true'} center pagination>
 						<TableHeaderColumn headerAlign='center' dataAlign="center" width="70px" isKey dataField="place" dataSort={true}>Place</TableHeaderColumn>
 						<TableHeaderColumn headerAlign='center' dataAlign="center"  width="40"dataField="img" dataFormat={this.imageFormatter}></TableHeaderColumn>
 						<TableHeaderColumn headerAlign='center' dataAlign="center" dataField="username" dataSort={true}>Username</TableHeaderColumn>
 						<TableHeaderColumn headerAlign='center' dataAlign="center"  dataField="recent" dataSort={true}>Last 30</TableHeaderColumn>
 						<TableHeaderColumn headerAlign='center' dataAlign="center"  dataField="alltime" dataSort={true}>All-Time</TableHeaderColumn>
-						<TableHeaderColumn headerAlign='center' dataAlign="center"  dataField="lastUp"  dataSort={true}>Last Updated</TableHeaderColumn>
+						<TableHeaderColumn headerAlign='center' dataAlign="center"  dataField="lastUp" dataFormat={this.dateFormatter} dataSort={true}>Last Updated</TableHeaderColumn>
 					</BootstrapTable>
 			</div>
 

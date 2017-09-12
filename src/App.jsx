@@ -51,7 +51,7 @@ class App extends Component{
 		return(
 			<div>
 					
-					<BootstrapTable  data={dataF}  striped={true} options={ { noDataText: 'Loading Latest Leadboard. Please wait...' } }   hover={'true'} center pagination>
+					<BootstrapTable  data={dataF}  striped={true} search={true} options={ { noDataText: 'Loading Latest Leadboard. Please wait...' } }   hover={'true'} center pagination>
 						<TableHeaderColumn headerAlign='center' dataAlign="center" width="70px" isKey dataField="place" dataSort={true}>Place</TableHeaderColumn>
 						<TableHeaderColumn headerAlign='center' dataAlign="center"  width="40"dataField="img" dataFormat={this.imageFormatter}></TableHeaderColumn>
 						<TableHeaderColumn headerAlign='center' dataAlign="center" dataField="username" dataSort={true}>Username</TableHeaderColumn>
