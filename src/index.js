@@ -17,7 +17,7 @@ ReactDOM.render(
 							</Nav>
 						</Navbar>
 						<div style={{justifyContent:"center", alignItems:"center", display:"flex", marginTop:"20px"}}>
-							<Link to="/30day"><Button bsStyle="primary" bsSize="large">30 Days</Button></Link>
+							<Link to="/30day"><Button style={{marginRight:"5px"}} bsStyle="primary" bsSize="large">30 Days</Button></Link>
 							<Link to="/alltime"><Button bsStyle="danger" bsSize="large">All-Time</Button></Link>
 						</div>
 						<div style={{margin:"20px", display:"flex", justifyContent:"center", alignItems:"center"}}>
@@ -30,7 +30,7 @@ ReactDOM.render(
 
 						<footer className="navbar-fixed-bottom" style={{display:"flex", justifyContent:"center",alignItems:"center"}}>
 
-							<p><a href="https://github.com/gusr27" target="_blank"><FontAwesome className="super-crazy-colors"name="github" size="4x" /></a></p>
+							<p><a href="https://github.com/gusr27/camperPro" target="_blank"><FontAwesome className="super-crazy-colors"name="github" size="4x" /></a></p>
 						</footer>
 						</div>
 					</div>
