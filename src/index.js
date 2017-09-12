@@ -12,9 +12,11 @@ ReactDOM.render(
 	<Router path="/30day">
 					<div>
 						<Navbar>
-							<Nav pullLeft="true">
-								<p>Gus Richardson <FontAwesome name="free-code-camp" size="2x"/></p>
-							</Nav>
+							<Navbar.Header>
+								<Navbar.Brand>
+									Gus Richardson <FontAwesome name="free-code-camp" size="1x"/>
+								</Navbar.Brand>
+							</Navbar.Header>
 						</Navbar>
 						<div style={{justifyContent:"center", alignItems:"center", display:"flex", marginTop:"20px"}}>
 							<Link to="/30day"><Button style={{marginRight:"5px"}} bsStyle="primary" bsSize="large">30 Days</Button></Link>
