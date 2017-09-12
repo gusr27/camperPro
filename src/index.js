@@ -5,7 +5,7 @@ import AllTime from './components/AllTime'
 import {BrowserRouter as Router, Route, Link} from 'react-router-dom'
 import {Navbar, Nav, NavItem,Button} from 'react-bootstrap'
 import FontAwesome from 'react-fontawesome'
-import './App.css'
+
 
 
 ReactDOM.render(
