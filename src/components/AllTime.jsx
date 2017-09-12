@@ -23,9 +23,9 @@ class AllTime extends Component{
 		const FETCH_URL="https://fcctop100.herokuapp.com/api/fccusers/top/alltime"
 		const people = []
 		axios.get(FETCH_URL).then(response => response.data.map((dataInside, idx)=>{
-			const time =moment(dataInside.lastUpdate).calendar()
+			
 
-			people.push({place: idx+1, username: dataInside.username, recent: dataInside.recent, alltime: dataInside.alltime, lastUp: time, img: dataInside.img})
+			people.push({place: idx+1, username: dataInside.username, recent: dataInside.recent, alltime: dataInside.alltime, lastUp: dataInside.lastUpdate, img: dataInside.img})
 			this.setState({thirtyDay: people})
 		}))
 
